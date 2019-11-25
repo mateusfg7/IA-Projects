@@ -15,9 +15,10 @@ except ModuleNotFoundError:
 
 from caracteristicas import caracteristicas
 from info_analise import analise
+from dados import validar_dados
 
-csv = "dados.csv"
-dados = pd.read_csv(csv)
+import_csv = "dados/dados.csv"
+dados = pd.read_csv(import_csv)
 
 treino_x = dados[["pelo","late","lama","banho","carne","legume","gatos"]]
 treino_y = dados["animal"]
@@ -27,10 +28,9 @@ modelo.fit(treino_x, treino_y)
 
 ser = caracteristicas()
 
-
-teste_x = [ser]
-predicao = modelo.predict(teste_x)
+predicao = modelo.predict([ser])
 
 animal = analise(predicao)
 
 print("Isso é um {}".format(animal))
+validar_dados(ser)

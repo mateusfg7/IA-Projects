@@ -33,7 +33,5 @@ def caracteristicas():
     for i in lista_de_caracteristicas:
         caracteristicas_binario.append(int(i))
     
-    # CÃO = 1
-    # PIG = 0
     return caracteristicas_binario
 
