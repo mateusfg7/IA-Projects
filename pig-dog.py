@@ -17,7 +17,7 @@ from caracteristicas import caracteristicas
 from info_analise import analise
 from dados import validar_dados
 
-import_csv = "dados/dados.csv"
+import_csv = "dados.csv"
 dados = pd.read_csv(import_csv)
 
 treino_x = dados[["pelo","late","lama","banho","carne","legume","gatos"]]
@@ -33,4 +33,4 @@ predicao = modelo.predict([ser])
 animal = analise(predicao)
 
 print("Isso é um {}".format(animal))
-validar_dados(ser)
+validar_dados(ser, predicao)
