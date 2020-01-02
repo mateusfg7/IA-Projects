@@ -6,7 +6,7 @@
 define se um animal é um porco ou um cachorro de acordo com suas características...
 
 ### neuralNetwor
-protótipo de uma rede neural feito na mão, falta adicionar o principal, machine learn rs
+protótipo de uma rede neural feito na mão
 
 
 >![previw](neuralNetwork/rede.png)
